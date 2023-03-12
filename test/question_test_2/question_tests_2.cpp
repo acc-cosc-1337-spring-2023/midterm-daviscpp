@@ -6,7 +6,16 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("test")
+TEST_CASE("Verify time")
 {
-	REQUIRE(test_config() == true);
+	REQUIRE(get_hours(1570846218) == 2);
+	REQUIRE(get_minutes(1570846218) == 10);
+	REQUIRE(get_seconds(1570846218) == 18);
+}
+
+TEST_CASE("Verify time2")
+{
+	REQUIRE(get_hours(1570875018) == 10);
+	REQUIRE(get_minutes(1570875018) == 10);
+	REQUIRE(get_seconds(1570875018) == 18);
 }

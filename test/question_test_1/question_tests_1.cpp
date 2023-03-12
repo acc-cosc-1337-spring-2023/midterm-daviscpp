@@ -6,7 +6,13 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("test")
+TEST_CASE("Verify Q1")
 {
-	REQUIRE(test_config() == true);
+	vector<double> q1_expected{1.5, 1, 2.75};
+	vector<double> q1_expected_2{3, 2, 5.5};
+	vector<double> q1_expected_3{.75, 0.5, 1.375};
+
+	REQUIRE(get_cookie_ingredients(48) == q1_expected);
+	REQUIRE(get_cookie_ingredients(96) == q1_expected_2);
+	REQUIRE(get_cookie_ingredients(24) == q1_expected_3);
 }
